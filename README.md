@@ -1,54 +1,114 @@
-# React + TypeScript + Vite
+Showcasing React + TypeScript + Tailwind ToDo app:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+```markdown
+# 📝 React + TypeScript ToDo App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A clean, lightweight, and scalable ToDo list application built using **React**, **TypeScript**, and **Tailwind CSS**. This project is part of a learning initiative to master modern frontend development by practicing real-world component-driven architecture with a focus on clarity, reusability, and maintainability.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ Functional components using modern React
+- 💡 Type-safe props and state management with TypeScript
+- 📦 Local state only (no external state libraries)
+- 🎯 Minimalist UI powered by Tailwind CSS
+- ✅ Add, complete, and delete tasks
+- ⚙️ Component-based modular structure
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Project Structure
+
+```
+src/
+├── App.tsx                 # Main component and app logic
+├── types.d.ts              # Custom type definitions
+├── components/
+│   ├── TodoForm.tsx        # Handles new task input
+│   ├── TodoList.tsx        # Displays all tasks
+│   └── TodoItem.tsx        # Single task with toggle/delete
+└── index.css               # Tailwind configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
+
+> This project uses [Vite](https://vitejs.dev) for an extremely fast development experience.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/react-ts-todo.git
+cd react-ts-todo
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+## 🛠️ Tailwind CSS Setup
+
+> Tailwind is preconfigured. If you clone or fork, make sure `index.css` includes:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+And `tailwind.config.js` should point to your React files:
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
 ```
+
+## 🧠 Learning Goals
+
+This project is designed to:
+
+- Solidify foundational React concepts (JSX, props, state, events)
+- Practice TypeScript in a real-world app
+- Understand component design patterns and local state flow
+- Gain confidence with Tailwind utility classes
+- Develop mental models for building React UI systems
+
+## 📚 Key Concepts Applied
+
+- `useState` for state management
+- Type-safe props using interfaces
+- Conditional rendering
+- Functional programming patterns
+- Clean separation of concerns via components
+
+## 🧩 Future Enhancements (Stretch Goals)
+
+- ⏳ Persist todos in `localStorage`
+- 🧪 Add unit tests with Vitest / React Testing Library
+- 📁 Use `Context` or `useReducer` for deeper state management
+- 🌐 Integrate API (e.g., Firebase or Supabase)
+- 🔍 Filtering and search functionality
+
+## 🙌 Acknowledgements
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+**Crafted with care by Athar Kharal** | Learning, building, and sharing ✨
+```
+
